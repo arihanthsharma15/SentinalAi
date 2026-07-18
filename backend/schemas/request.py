@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
 
-class AnalysisReport(BaseModel):
+class AnalysisRequet(BaseModel):
     transaction_filename: str
     invoice_filename: str
