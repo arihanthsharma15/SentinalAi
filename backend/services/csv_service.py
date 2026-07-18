@@ -131,7 +131,7 @@ class CSVService:
             raise HTTPException(
                 status_code=400,
                 detail="Unable to read transactions CSV."
-            )
+    
 
         df = CSVService.normalize_transactions(df)
 
