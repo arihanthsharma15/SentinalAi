@@ -1,0 +1,205 @@
+upload 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SentinelAI - Cyber Ingestion Portal</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    body {
+      background-color: #020205;
+      position: relative;
+    }
+    /* Ambient Scanlines Overlay */
+    body::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0; left: 0; bottom: 0; right: 0;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+      z-index: 10;
+      background-size: 100% 4px;
+      pointer-events: none;
+    }
+    .glow-cyan {
+      text-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
+    }
+    .glow-pink {
+      text-shadow: 0 0 10px rgba(255, 0, 127, 0.6);
+    }
+    .box-glow-pink {
+      box-shadow: 0 0 20px rgba(255, 0, 127, 0.15);
+    }
+    .box-glow-cyan {
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+    }
+  </style>
+</head>
+<body class="text-slate-200 font-mono min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+
+  <!-- Live Cyan Ledger Rain Background -->
+  <canvas id="matrixCanvas" class="fixed inset-0 w-full h-full -z-10 pointer-events-none opacity-55"></canvas>
+
+  <!-- Cyber Top Navigation -->
+  <header class="border-b border-cyan-500/30 px-6 py-4 flex items-center justify-between bg-black/90 backdrop-blur-md relative z-20">
+    <div class="flex items-center space-x-3">
+      <div class="bg-gradient-to-br from-pink-500 to-indigo-600 p-2 rounded-lg text-white shadow-[0_0_15px_rgba(236,72,153,0.5)]">
+        <i data-lucide="shield-alert" class="w-6 h-6"></i>
+      </div>
+      <div>
+        <span class="text-xl font-black tracking-widest text-white glow-cyan">SENTINEL_AI</span>
+        <span class="block text-[9px] text-pink-500 font-mono tracking-widest uppercase font-bold">SYSTEM_AUDIT_PORTAL v2.1</span>
+      </div>
+    </div>
+
+    <!-- Quick Navigation Actions -->
+    <div class="flex items-center space-x-3">
+      <a href="dashboard.html" class="text-xs font-bold text-cyan-400 hover:text-white px-3 py-2 border border-cyan-500/30 rounded-lg hover:bg-cyan-950/30 transition flex items-center space-x-1">
+        <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="report.html" class="text-xs font-bold text-pink-500 hover:text-white px-3 py-2 border border-pink-500/30 rounded-lg hover:bg-pink-950/30 transition flex items-center space-x-1">
+        <i data-lucide="file-text" class="w-4 h-4"></i>
+        <span>Report</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Upload HUD Panel -->
+  <main class="flex-1 flex items-center justify-center p-6 relative z-20">
+    <div class="max-w-md w-full bg-black/85 border border-pink-500/30 p-8 rounded-2xl shadow-2xl relative space-y-6 box-glow-pink backdrop-blur-md">
+      
+      <!-- Cyan Corner brackets -->
+      <div class="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-cyan-400"></div>
+      <div class="absolute top-0 right-0 w-5 h-5 border-t-2 border-r-2 border-cyan-400"></div>
+      <div class="absolute bottom-0 left-0 w-5 h-5 border-b-2 border-l-2 border-cyan-400"></div>
+      <div class="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-cyan-400"></div>
+
+      <div class="text-center space-y-2">
+        <h1 class="text-2xl font-black tracking-widest text-pink-500 glow-pink">DATA_INGESTION</h1>
+        <p class="text-xs text-slate-400 font-sans">Upload your transaction and invoice registers. The platform runs automated neural rule matching followed by Gemma LLM risk explanations.</p>
+      </div>
+
+      <form id="uploadForm" class="space-y-5">
+        <div class="space-y-1.5">
+          <label class="block text-[10px] font-bold tracking-widest text-cyan-400 uppercase">TRANSACTION_LEDGER (CSV)</label>
+          <div class="relative border border-slate-800 hover:border-cyan-400/60 rounded-xl p-4 transition bg-slate-950/40 cursor-pointer flex flex-col items-center justify-center text-center">
+            <input type="file" id="transactionFile" accept=".csv" required class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+            <i data-lucide="file-spreadsheet" class="text-slate-500 w-8 h-8 mb-2"></i>
+            <span id="txLabel" class="text-xs text-slate-400 font-mono tracking-wide">Select transaction_db.csv</span>
+          </div>
+        </div>
+
+        <div class="space-y-1.5">
+          <label class="block text-[10px] font-bold tracking-widest text-cyan-400 uppercase">INVOICE_LEDGER (CSV)</label>
+          <div class="relative border border-slate-800 hover:border-cyan-400/60 rounded-xl p-4 transition bg-slate-950/40 cursor-pointer flex flex-col items-center justify-center text-center">
+            <input type="file" id="invoiceFile" accept=".csv" required class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+            <i data-lucide="file-text" class="text-slate-500 w-8 h-8 mb-2"></i>
+            <span id="invLabel" class="text-xs text-slate-400 font-mono tracking-wide">Select invoice_db.csv</span>
+          </div>
+        </div>
+
+        <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-bold py-3.5 px-4 rounded-xl text-xs tracking-widest uppercase transition-all duration-200 shadow-lg shadow-pink-600/30 flex items-center justify-center space-x-2 border border-pink-400/30">
+          <i data-lucide="cpu" class="w-4 h-4"></i>
+          <span>INITIATE_PIPELINE_AUDIT</span>
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Interactive Cyber Loading Overlay -->
+  <div id="loadingOverlay" class="fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center hidden p-4 transition-opacity duration-300">
+    <div class="w-full max-w-xl bg-black border border-cyan-500/30 rounded-2xl p-8 flex flex-col items-center justify-center space-y-12 shadow-2xl relative overflow-visible box-glow-cyan">
+      
+      <div class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-cyan-400"></div>
+      <div class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-cyan-400"></div>
+      <div class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-cyan-400"></div>
+      <div class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-cyan-400"></div>
+
+      <div class="relative w-11/12 h-6 bg-slate-950 rounded-full border border-slate-800 mt-16 shadow-[inner_0_2px_4px_rgba(0,0,0,0.6)]">
+        <div id="progressBarFill" class="absolute left-0 top-0 h-full bg-gradient-to-r from-pink-600 to-red-600 rounded-full transition-all duration-150 ease-out shadow-[0_0_15px_#ef4444]" style="width: 0%;"></div>
+        
+        <div id="reaperWrapper" class="absolute top-[-52px] transition-all duration-150 ease-out" style="left: 0%; transform: translateX(-50%);">
+          <svg class="w-16 h-16 text-red-500 filter drop-shadow-[0_0_8px_rgba(239,68,68,0.8)]" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M42,85 C42,65 47,55 52,40 C50,32 52,20 60,20 C66,20 68,28 66,40 C68,50 74,60 74,85 Z" />
+            <path d="M37,90 L62,10" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
+            <path d="M62,10 C47,5 27,12 17,30 C27,20 47,15 62,10" fill="currentColor" />
+          </svg>
+        </div>
+
+        <div class="absolute right-0 top-[-50px] transform translate-x-1/2">
+          <svg class="w-16 h-16 text-cyan-400 filter drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M65,85 L95,85 L95,72 L85,72 L85,85" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+            <path d="M70,68 L95,68" stroke="currentColor" stroke-width="4" />
+            <path d="M78,68 L78,52 L92,52 L92,64 L78,64" stroke="currentColor" stroke-width="2" fill="none" />
+            <path d="M83,64 L83,68 M81,68 L89,68" stroke="currentColor" stroke-width="2" />
+            <path d="M48,85 L58,85 M53,85 L53,68 M45,68 L58,68 L58,52 L45,52" stroke="currentColor" stroke-width="2.5" fill="none" />
+            <circle cx="58" cy="40" r="6" />
+            <path d="M53,46 C53,55 63,55 65,68 L50,68 Z" />
+            <path d="M65,54 L74,58 M65,56 L72,62" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="text-center space-y-2 w-full">
+        <p id="loadingStatusText" class="text-md font-bold tracking-widest text-pink-500 uppercase glow-pink">LOADING_AUDIT_SCHEMAS...</p>
+        <p class="text-[9px] text-slate-500 font-mono uppercase tracking-widest">SentinelAI // Real-Time Threat Ingestion Pipeline</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="py-4 border-t border-slate-900 text-center text-[10px] text-slate-600 bg-black/40 z-20">
+    <p>SENTINEL_AI_SYSTEMS // PRIVATE SANDBOX MODE</p>
+  </footer>
+
+  <!-- Matrix Background Canvas Script -->
+  <script>
+    const canvas = document.getElementById('matrixCanvas');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    // Alphanumeric code combined with standard auditing/financial symbols
+    const alphabet = "01$€£¥TXNINVACMEGLOBALDIGITALCRITICALRISK01010101";
+    const fontSize = 14;
+    const columns = Math.floor(width / fontSize);
+    const rainDrops = Array(columns).fill(1);
+
+    const draw = () => {
+      ctx.fillStyle = 'rgba(2, 2, 5, 0.08)'; // Deep faded trailing effect
+      ctx.fillRect(0, 0, width, height);
+
+      ctx.font = 'bold ' + fontSize + 'px monospace';
+
+      for (let i = 0; i < rainDrops.length; i++) {
+        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        const alpha = Math.random() * 0.8 + 0.2; // alternating glows
+        ctx.fillStyle = `rgba(0, 240, 255, ${alpha})`;
+        
+        ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+        if (rainDrops[i] * fontSize > height && Math.random() > 0.975) {
+          rainDrops[i] = 0;
+        }
+        rainDrops[i]+=0.3;
+      }
+    };
+
+    const interval = setInterval(draw, 30);
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+  </script>
+
+  <script src="js/config.js"></script>
+  <script src="js/upload.js"></script>
+</body>
+</html>
