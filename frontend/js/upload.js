@@ -86,7 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (!response.ok) {
-        throw new Error('Failure response from the pipeline engine');
+        const errorBody = await response.json().catch(() => ({}));
+        throw new Error(errorBody.detail || 'The pipeline could not process these CSV files.');
       }
 
       await response.json();
@@ -101,24 +102,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 700);
 
     } catch (error) {
-      console.warn('Backend offline. Simulating sandbox compilation pipeline...', error);
-      
-      // Sandbox fallback loop (allows full animation presentation without backend active)
+      console.error('Upload failed:', error);
       clearInterval(progressTimer);
-      
-      let catchupProgress = currentProgress;
-      const fallbackTimer = setInterval(() => {
-        if (catchupProgress < 100) {
-          catchupProgress += 5;
-          updateLoadingState(catchupProgress);
-        } else {
-          clearInterval(fallbackTimer);
-          loadingStatusText.innerText = "SANDBOX COMPLIANCE SUMMARY SECURED!";
-          setTimeout(() => {
-            window.location.href = "dashboard.html";
-          }, 700);
-        }
-      }, 80);
+      loadingOverlay.classList.add('hidden');
+      alert(error.message || 'Unable to reach the backend. Start the API and try again.');
     }
   });
 });
