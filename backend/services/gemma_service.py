@@ -3,9 +3,18 @@ import os
 from pathlib import Path
 from typing import Any
 
-from dotenv import load_dotenv
-from google import genai
-from google.genai import types
+try:
+    from dotenv import load_dotenv
+except ImportError:  # Keep deterministic analysis available without optional AI packages.
+    def load_dotenv(*_args, **_kwargs):
+        return False
+
+try:
+    from google import genai
+    from google.genai import types
+except ImportError:
+    genai = None
+    types = None
 
 from schemas.response import GemmaAnalysis
 
@@ -21,13 +30,20 @@ class GemmaService:
     """
 
     BASE_DIR = Path(__file__).resolve().parents[1]
-    ENV_PATH = BASE_DIR / ".env"
+    ENV_PATHS = (BASE_DIR / ".env", BASE_DIR.parent / ".env")
     SYSTEM_PROMPT_PATH = BASE_DIR / "prompts" / "system_prompt.txt"
     REPORT_PROMPT_PATH = BASE_DIR / "prompts" / "report_prompt.txt"
 
     @staticmethod
+    def _is_ai_enabled() -> bool:
+        """Only make remote model calls when explicitly enabled in the environment."""
+        return os.getenv("GEMMA_ENABLED", "false").strip().lower() in {"1", "true", "yes"}
+
+    @staticmethod
     def _load_env() -> None:
-        load_dotenv(GemmaService.ENV_PATH)
+        for env_path in GemmaService.ENV_PATHS:
+            if env_path.exists():
+                load_dotenv(env_path)
 
     @staticmethod
     def _read_prompt(path: Path, fallback: str) -> str:
@@ -100,7 +116,13 @@ class GemmaService:
         api_key = os.getenv("GEMMA_API_KEY", "").strip()
         model_name = os.getenv("MODEL_NAME", "gemma-3n-e4b-it").strip()
 
-        if not api_key or api_key == "YOUR_API_KEY":
+        if (
+            not GemmaService._is_ai_enabled()
+            or not api_key
+            or api_key == "YOUR_API_KEY"
+            or genai is None
+            or types is None
+        ):
             return GemmaService._fallback_analyze(payload)
 
         try:
@@ -152,7 +174,13 @@ class GemmaService:
         api_key = os.getenv("GEMMA_API_KEY", "").strip()
         model_name = os.getenv("MODEL_NAME", "gemma-3n-e4b-it").strip()
 
-        if not api_key or api_key == "YOUR_API_KEY":
+        if (
+            not GemmaService._is_ai_enabled()
+            or not api_key
+            or api_key == "YOUR_API_KEY"
+            or genai is None
+            or types is None
+        ):
             total = len(records)
             high = sum(1 for record in records if record.gemmaAnalysis.risk_score >= 80)
             medium = sum(1 for record in records if 50 <= record.gemmaAnalysis.risk_score < 80)

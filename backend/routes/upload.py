@@ -20,21 +20,27 @@ async def upload_files(
     and start fraud analysis.
     """
 
+    if not transaction_csv.filename or not invoice_csv.filename:
+        raise HTTPException(status_code=400, detail="Both uploaded files must have a filename.")
+
+    if not transaction_csv.filename.lower().endswith(".csv") or not invoice_csv.filename.lower().endswith(".csv"):
+        raise HTTPException(status_code=400, detail="Both uploads must be CSV files.")
+
     try:
 
         # ----------------------------
         # Save uploaded files
         # ----------------------------
 
-        uploads_dir = Path("uploads")
+        uploads_dir = Path(__file__).resolve().parents[1] / "uploads"
         transaction_path = await CSVService.save_upload(
             transaction_csv,
-            uploads_dir / f"{uuid4()}_{transaction_csv.filename}",
+            uploads_dir / f"{uuid4()}_{Path(transaction_csv.filename).name}",
         )
 
         invoice_path = await CSVService.save_upload(
             invoice_csv,
-            uploads_dir / f"{uuid4()}_{invoice_csv.filename}",
+            uploads_dir / f"{uuid4()}_{Path(invoice_csv.filename).name}",
         )
 
         # ----------------------------
@@ -74,6 +80,8 @@ async def upload_files(
             "flagged_count": len(records),
         }
 
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(
             status_code=500,

@@ -1,0 +1,121 @@
+transaction_id,sender_name,sender_account_number,sender_bank,sender_account_age_days,receiver_name,receiver_account_number,receiver_bank,amount,currency,payment_method,transaction_type,timestamp,city,state,country,device_id,ip_address,remarks
+TXN0001,Siddharth Vaidya,566392613993,HDFC,1538,Astra Foods,130201276659,HDFC,4582.86,INR,NEFT,Vendor Payment,2026-05-04T18:47:57,Chennai,Tamil Nadu,India,DEV-4582,69.13.101.214,Vendor fulfilment
+TXN0002,Sana Siddiqui,941629821539,Kotak,1459,Onyx Realty,213114812281,HDFC,11155.99,INR,UPI,Vendor Payment,2026-05-14T13:17:09,Delhi,Delhi,India,DEV-7224,34.183.176.135,Payroll processing
+TXN0003,Priya Nair,312933106111,Kotak,1160,Onyx Realty,176040557040,HDFC,13169.32,INR,IMPS,Business,2026-05-10T18:39:56,Bengaluru,Karnataka,India,DEV-4733,207.148.40.119,Standard purchase order
+TXN0004,Aarav Sharma,607507949295,HDFC,140,Zeta Automation,397982492151,Yes Bank,8701.00,INR,RTGS,Business,2026-05-06T11:00:00,Hyderabad,Telangana,India,DEV-4598,185.166.28.117,Velocity burst from same sender
+TXN0005,Aarav Sharma,251461507038,HDFC,140,Sigma Labs,917103043320,Kotak,8492.00,INR,RTGS,Vendor Payment,2026-05-06T11:03:00,Delhi,Delhi,India,DEV-9830,77.219.204.185,Velocity burst from same sender
+TXN0006,Aarav Sharma,521179644432,HDFC,140,Venkatesh Pharma,754474071330,Axis,9421.00,INR,UPI,Business,2026-05-06T11:06:00,Hyderabad,Telangana,India,DEV-9669,74.5.58.136,Velocity burst from same sender
+TXN0007,Siddharth Vaidya,429103158382,HDFC,1508,Sigma Labs,803694611575,Kotak,6547.61,INR,IMPS,Business,2026-05-29T19:16:32,Delhi,Delhi,India,DEV-4258,49.191.82.0,Monthly operational payment
+TXN0008,Kavya Srinivasan,903526763113,Axis,520,Sigma Labs,995440510689,HDFC,2575.97,INR,RTGS,Personal,2026-05-02T11:56:36,Bengaluru,Karnataka,India,DEV-9727,206.64.65.243,Vendor fulfilment
+TXN0009,Meera Pillai,815849444665,SBI,1134,Bharat Telecom,582640166001,Kotak,11930.93,INR,IMPS,Vendor Payment,2026-05-25T19:44:12,Pune,Maharashtra,India,DEV-8397,40.126.115.32,Cross-border vendor fee
+TXN0010,Dev Patel,405964900141,Kotak,175,Sundaram Logistics,635449182375,ICICI,9904.00,INR,NEFT,Business,2026-05-28T14:04:32,Pune,Maharashtra,India,DEV-9834,43.242.124.242,Structuring pattern observed
+TXN0011,Nisha Reddy,542641960943,HDFC,871,Indigo Travel Co,472494841003,IndusInd,9305.49,INR,RTGS,Salary,2026-05-15T19:03:43,Bengaluru,Karnataka,India,DEV-2790,73.98.97.229,Vendor fulfilment
+TXN0012,Vikram Mehta,202946055043,ICICI,1684,Global Health Services,928612436713,IndusInd,6890.33,INR,UPI,Salary,2026-05-28T16:06:03,Delhi,Delhi,India,DEV-4872,52.208.248.246,Routine business settlement
+TXN0013,Karan Kapoor,306823277527,HDFC,1635,Zeta Automation,337497551698,HDFC,5861.37,INR,IMPS,Personal,2026-05-26T15:18:27,Mumbai,Maharashtra,India,DEV-9883,25.160.29.25,Expense reimbursement
+TXN0014,Rakesh Gupta,230583221679,Kotak,170,Alpha Software,373029676920,Kotak,3136.42,INR,UPI,Vendor Payment,2026-05-20T09:43:55,Pune,Maharashtra,India,DEV-1651,168.41.214.161,Payroll processing
+TXN0015,Rohit Rao,928623824187,Yes Bank,298,Indigo Travel Co,181328359515,HDFC,5064.46,INR,RTGS,Salary,2026-05-22T18:19:29,Chennai,Tamil Nadu,India,DEV-8508,169.51.37.109,Standard purchase order
+TXN0016,Aditya Das,989003396697,ICICI,613,Aviate Consulting,682629391846,HDFC,12034.63,INR,NEFT,Personal,2026-05-06T15:53:34,Delhi,Delhi,India,DEV-5905,179.53.68.135,Cross-border vendor fee
+TXN0017,Ananya Iyer,159468562624,Yes Bank,1499,Astra Foods,796181120841,Axis,9964.00,INR,RTGS,Business,2026-05-16T13:57:58,Pune,Maharashtra,India,DEV-5533,21.1.170.66,Structuring pattern observed
+TXN0018,Siddharth Vaidya,507311484139,ICICI,259,Aviate Consulting,708092248272,ICICI,6634.58,INR,IMPS,Business,2026-05-03T19:57:09,Chennai,Tamil Nadu,India,DEV-8041,42.21.157.186,Routine business settlement
+TXN0019,Priya Nair,992493718889,ICICI,1627,Crestline Supplies,127540594799,ICICI,4269.22,INR,UPI,Personal,2026-05-18T14:39:47,Chennai,Tamil Nadu,India,DEV-6442,210.210.127.136,Monthly operational payment
+TXN0020,Neha Kulkarni,126727253143,Axis,1702,Astra Foods,313288218458,Axis,11760.70,INR,NEFT,Vendor Payment,2026-05-30T15:22:19,Bengaluru,Karnataka,India,DEV-6378,81.35.142.179,Payroll processing
+TXN0021,Siddharth Vaidya,216128430402,Axis,266,Nimbus Exporters,579303623884,SBI,13268.14,INR,RTGS,Business,2026-05-29T12:11:37,Chennai,Tamil Nadu,India,DEV-6139,121.59.197.97,Cross-border vendor fee
+TXN0022,Rohit Rao,655340655504,Yes Bank,913,Oracle Retail India,831472807830,Axis,9984.00,INR,NEFT,Business,2026-05-28T10:46:57,Hyderabad,Telangana,India,DEV-6344,113.151.65.98,Structuring pattern observed
+TXN0023,Nisha Reddy,965134782024,Yes Bank,1152,Zeta Automation,768210946534,Yes Bank,12304.51,INR,RTGS,Salary,2026-05-27T08:19:18,Chennai,Tamil Nadu,India,DEV-6279,129.226.226.109,Payroll processing
+TXN0024,Aditya Das,360924151492,IndusInd,1085,Alpha Software,442192051776,ICICI,3287.20,INR,UPI,Personal,2026-05-22T18:39:21,Chennai,Tamil Nadu,India,DEV-4262,47.12.23.125,Vendor fulfilment
+TXN0025,Pooja Singh,928467665569,IndusInd,1042,Urban Malls Ltd,949804121401,HDFC,6801.62,INR,NEFT,Salary,2026-05-13T11:09:41,Bengaluru,Karnataka,India,DEV-7965,66.90.237.25,Routine business settlement
+TXN0026,Meera Pillai,591979363867,IndusInd,1576,Sparx Interiors,275652171321,Yes Bank,6814.48,INR,IMPS,Personal,2026-05-29T15:39:52,Bengaluru,Karnataka,India,DEV-8777,125.132.126.141,Platform subscription renewal
+TXN0027,Aditya Das,263803069319,Yes Bank,510,Alpha Software,521900055512,Yes Bank,4577.55,INR,UPI,Personal,2026-05-09T13:20:57,Mumbai,Maharashtra,India,DEV-3503,190.109.32.212,Vendor fulfilment
+TXN0028,Nisha Reddy,734648396163,Kotak,827,Sigma Labs,625619734196,HDFC,6314.02,INR,NEFT,Salary,2026-05-29T20:37:44,Hyderabad,Telangana,India,DEV-6763,86.199.214.112,Routine business settlement
+TXN0029,Pooja Singh,614711052552,SBI,1399,Sparx Interiors,241388354666,Kotak,7173.40,INR,IMPS,Personal,2026-05-22T20:25:46,Hyderabad,Telangana,India,DEV-9751,16.201.13.42,Monthly operational payment
+TXN0030,Siddharth Vaidya,925828823896,ICICI,700,Global Health Services,376688514097,IndusInd,3435.27,INR,RTGS,Salary,2026-05-07T15:20:21,Hyderabad,Telangana,India,DEV-2341,130.9.26.179,Platform subscription renewal
+TXN0031,Sana Siddiqui,620233157780,IndusInd,438,Nexa Systems,227429355441,Kotak,1695.18,INR,UPI,Vendor Payment,2026-05-27T08:39:09,Chennai,Tamil Nadu,India,DEV-4571,129.131.188.85,Payroll processing
+TXN0032,Kavya Srinivasan,368981957930,Yes Bank,251,Urban Malls Ltd,864941841452,IndusInd,9950.00,INR,NEFT,Business,2026-05-23T12:04:37,Chennai,Tamil Nadu,India,DEV-5941,185.61.21.177,Structuring pattern observed
+TXN0033,Meera Pillai,606070444418,Yes Bank,1769,Global Health Services,270541592056,Axis,2048.17,INR,RTGS,Business,2026-05-14T15:06:27,Delhi,Delhi,India,DEV-3885,197.138.247.238,Standard purchase order
+TXN0034,Nisha Reddy,131509583569,SBI,953,Prime Couriers,298964420838,Axis,11676.07,INR,UPI,Personal,2026-05-08T20:29:36,Delhi,Delhi,India,DEV-4475,100.132.174.143,Platform subscription renewal
+TXN0035,Kavya Srinivasan,622657187359,Kotak,524,Aviate Consulting,884458179683,Axis,7554.52,INR,NEFT,Business,2026-05-24T14:31:35,Bengaluru,Karnataka,India,DEV-8342,212.8.47.150,Payroll processing
+TXN0036,Sana Siddiqui,870310160681,Yes Bank,1163,Zeta Automation,398301564502,SBI,4966.33,INR,RTGS,Salary,2026-05-17T13:27:47,Mumbai,Maharashtra,India,DEV-5118,69.61.98.161,Standard purchase order
+TXN0037,Ananya Iyer,211585443515,IndusInd,596,Ciscom Retail,314029509095,SBI,3477.34,INR,NEFT,Salary,2026-05-24T17:48:33,Chennai,Tamil Nadu,India,DEV-4727,102.91.154.7,Cross-border vendor fee
+TXN0038,Nitin Bhatia,727117904706,ICICI,1458,Ciscom Retail,616617303633,Axis,1759.84,INR,UPI,Personal,2026-05-05T18:55:48,Delhi,Delhi,India,DEV-8216,97.94.26.129,Expense reimbursement
+TXN0039,Pooja Singh,374851785492,IndusInd,340,Astra Foods,710394101616,IndusInd,6128.70,INR,UPI,Business,2026-05-05T20:36:19,Bengaluru,Karnataka,India,DEV-7818,165.115.194.230,Vendor fulfilment
+TXN0040,Yash Khanna,706336912249,IndusInd,1278,BluePeak Insurance,272121093022,HDFC,9933.00,INR,RTGS,Business,2026-05-22T10:10:15,Pune,Maharashtra,India,DEV-7693,125.240.149.16,Structuring pattern observed
+TXN0041,Sana Siddiqui,226380009561,Yes Bank,1437,BluePeak Insurance,347152013493,Yes Bank,9846.75,INR,IMPS,Business,2026-05-08T12:50:50,Delhi,Delhi,India,DEV-3441,78.72.36.30,Payroll processing
+TXN0042,Neha Kulkarni,400401507048,Kotak,284,BluePeak Insurance,694854998490,Axis,11338.16,INR,RTGS,Salary,2026-05-15T19:19:44,Chennai,Tamil Nadu,India,DEV-8172,30.20.221.165,Platform subscription renewal
+TXN0043,Kavya Srinivasan,815193503850,HDFC,1210,Aviate Consulting,298763169017,Kotak,4015.77,INR,UPI,Personal,2026-05-02T20:48:11,Bengaluru,Karnataka,India,DEV-8141,172.251.46.240,Expense reimbursement
+TXN0044,Ishita Banerjee,936717894940,SBI,873,Global Health Services,141017352624,Axis,9442.64,INR,NEFT,Personal,2026-05-23T15:18:42,Delhi,Delhi,India,DEV-2442,90.129.165.59,Platform subscription renewal
+TXN0045,Arjun Menon,588017414546,IndusInd,141,Nimbus Exporters,159098709360,ICICI,9289.22,INR,IMPS,Salary,2026-05-07T16:23:39,Bengaluru,Karnataka,India,DEV-5375,150.67.147.224,Expense reimbursement
+TXN0046,Nitin Bhatia,607293452733,HDFC,666,Alpha Software,232916613814,Yes Bank,13169.71,INR,NEFT,Vendor Payment,2026-05-18T08:35:26,Bengaluru,Karnataka,India,DEV-3522,137.149.139.212,Vendor fulfilment
+TXN0047,Pooja Singh,657434001695,ICICI,1257,Alpha Software,409248663017,Yes Bank,9935.00,INR,IMPS,Business,2026-05-25T15:21:59,Hyderabad,Telangana,India,DEV-5891,160.250.76.228,Structuring pattern observed
+TXN0048,Meera Pillai,554302504239,SBI,689,Alpha Software,448079814698,Yes Bank,7988.58,INR,IMPS,Salary,2026-05-28T11:44:15,Delhi,Delhi,India,DEV-8749,190.195.197.77,Platform subscription renewal
+TXN0049,Pooja Singh,890339899896,ICICI,1760,Oracle Retail India,547295741582,IndusInd,13073.85,INR,RTGS,Business,2026-05-15T09:33:58,Pune,Maharashtra,India,DEV-3529,29.240.135.173,Expense reimbursement
+TXN0050,Kavya Srinivasan,175666412237,Yes Bank,1313,Zeta Automation,792498065181,Yes Bank,11676.71,INR,IMPS,Personal,2026-05-23T20:31:55,Bengaluru,Karnataka,India,DEV-5708,68.46.222.50,Routine business settlement
+TXN0051,Siddharth Vaidya,260763575623,Axis,694,Astra Foods,680869404959,Axis,9736.21,INR,UPI,Business,2026-05-26T08:18:22,Mumbai,Maharashtra,India,DEV-3950,53.89.40.195,Standard purchase order
+TXN0052,Kavya Srinivasan,417403277612,Axis,971,Sparx Interiors,699910770735,ICICI,2960.35,INR,IMPS,Personal,2026-05-09T18:00:57,Pune,Maharashtra,India,DEV-2210,123.176.153.217,Expense reimbursement
+TXN0053,Nitin Bhatia,873062725840,Axis,248,Aviate Consulting,122742842928,IndusInd,3650.37,INR,IMPS,Salary,2026-05-08T14:36:22,Delhi,Delhi,India,DEV-7484,80.4.25.254,Cross-border vendor fee
+TXN0054,Mira Joshi,205777520189,Kotak,1418,Sparx Interiors,791074856708,Yes Bank,3893.76,INR,NEFT,Personal,2026-05-25T19:49:42,Delhi,Delhi,India,DEV-1645,89.225.17.186,Monthly operational payment
+TXN0055,Ritika Shah,425586388909,HDFC,441,Venkatesh Pharma,981923066620,HDFC,9967.00,INR,IMPS,Business,2026-05-17T13:53:10,Delhi,Delhi,India,DEV-8673,29.72.115.203,Structuring pattern observed
+TXN0056,Meera Pillai,803611924651,HDFC,784,Crestline Supplies,512060416063,HDFC,1371.20,INR,UPI,Salary,2026-05-22T19:43:16,Hyderabad,Telangana,India,DEV-4830,130.12.167.113,Platform subscription renewal
+TXN0057,Siddharth Vaidya,203577948775,Yes Bank,268,Nexa Systems,248337633154,Axis,12385.47,INR,RTGS,Salary,2026-05-05T08:02:19,Hyderabad,Telangana,India,DEV-8432,104.214.79.212,Expense reimbursement
+TXN0058,Siddharth Vaidya,498811121833,IndusInd,1443,Astra Foods,506671900140,Kotak,8772.52,INR,RTGS,Business,2026-05-12T11:28:28,Hyderabad,Telangana,India,DEV-6876,25.203.141.97,Payroll processing
+TXN0059,Ananya Iyer,708876714629,HDFC,1641,Onyx Realty,745134828528,ICICI,3808.90,INR,UPI,Business,2026-05-11T11:08:50,Chennai,Tamil Nadu,India,DEV-4817,94.75.1.141,Payroll processing
+TXN0060,Vikram Mehta,454716422315,Kotak,299,Venkatesh Pharma,289046340270,SBI,11021.72,INR,UPI,Business,2026-05-01T13:50:50,Delhi,Delhi,India,DEV-1858,42.215.58.32,Payroll processing
+TXN0061,Pooja Singh,134205232011,IndusInd,25,Onyx Realty,569876368241,Yes Bank,41009.00,INR,UPI,Vendor Payment,2026-05-08T17:02:46,Delhi,Delhi,India,DEV-2768,135.227.37.41,High value transaction on new account
+TXN0062,Dev Patel,972304329325,ICICI,1253,Urban Malls Ltd,227568171232,IndusInd,2752.16,INR,RTGS,Salary,2026-05-17T12:29:32,Bengaluru,Karnataka,India,DEV-4522,120.231.116.211,Platform subscription renewal
+TXN0063,Dev Patel,199072583186,Axis,670,Onyx Realty,193766746282,HDFC,10174.23,INR,RTGS,Salary,2026-05-22T12:23:09,Hyderabad,Telangana,India,DEV-8075,34.190.66.30,Expense reimbursement
+TXN0064,Rakesh Gupta,417691853029,Kotak,1392,Ciscom Retail,441881158100,SBI,9441.16,INR,IMPS,Personal,2026-05-25T14:55:58,Delhi,Delhi,India,DEV-2697,157.108.79.246,Routine business settlement
+TXN0065,Sana Siddiqui,395036212198,SBI,1683,Astra Foods,297692848598,SBI,5721.00,INR,RTGS,Vendor Payment,2026-05-14T16:49:52,Pune,Maharashtra,India,DEV-6062,96.179.3.92,Routine business settlement
+TXN0066,Vikram Mehta,273262828950,Yes Bank,1558,Prime Couriers,440891782309,Yes Bank,2055.90,INR,UPI,Business,2026-05-17T11:24:26,Hyderabad,Telangana,India,DEV-6314,208.43.26.79,Expense reimbursement
+TXN0067,Neha Kulkarni,665883171878,HDFC,1024,Urban Malls Ltd,478445964518,Axis,2203.45,INR,IMPS,Salary,2026-05-20T15:26:17,Chennai,Tamil Nadu,India,DEV-2816,82.249.157.23,Payroll processing
+TXN0068,Sana Siddiqui,104810296150,Kotak,1601,Zeta Automation,922475007249,Axis,1294.55,INR,RTGS,Vendor Payment,2026-05-05T20:16:18,Bengaluru,Karnataka,India,DEV-3878,43.194.117.181,Standard purchase order
+TXN0069,Rahul Verma,542876297368,IndusInd,14,Zeta Automation,286078462460,IndusInd,39686.00,INR,UPI,Vendor Payment,2026-05-28T13:36:27,Chennai,Tamil Nadu,India,DEV-8538,186.185.45.223,High value transaction on new account
+TXN0070,Ananya Iyer,658673795404,Axis,665,Sparx Interiors,227273730823,Kotak,6125.53,INR,UPI,Salary,2026-05-24T13:14:21,Pune,Maharashtra,India,DEV-9355,59.178.179.75,Monthly operational payment
+TXN0071,Sana Siddiqui,722263658623,ICICI,392,Astra Foods,798546330841,Kotak,3626.44,INR,NEFT,Business,2026-05-25T18:31:29,Delhi,Delhi,India,DEV-6295,170.161.77.225,Expense reimbursement
+TXN0072,Rahul Verma,160291064054,Axis,750,Alpha Software,182837365101,Yes Bank,4924.69,INR,RTGS,Business,2026-05-17T09:19:29,Chennai,Tamil Nadu,India,DEV-2479,167.196.236.21,Expense reimbursement
+TXN0073,Yash Khanna,885903361820,Yes Bank,156,Prime Couriers,654412972034,Yes Bank,5154.78,INR,IMPS,Vendor Payment,2026-05-15T09:51:57,Mumbai,Maharashtra,India,DEV-3827,20.126.224.224,Standard purchase order
+TXN0074,Aditya Das,794879438508,Kotak,867,Nimbus Exporters,467852375490,HDFC,5675.94,INR,RTGS,Salary,2026-05-25T13:43:38,Mumbai,Maharashtra,India,DEV-6401,34.197.145.129,Routine business settlement
+TXN0075,Ritika Shah,514717412425,IndusInd,14,Urban Malls Ltd,970347176290,SBI,28776.00,INR,NEFT,Vendor Payment,2026-05-21T19:42:25,Mumbai,Maharashtra,India,DEV-3093,181.47.216.185,High value transaction on new account
+TXN0076,Aarav Sharma,966915218789,SBI,423,Crestline Supplies,654485177450,IndusInd,12899.38,INR,RTGS,Salary,2026-05-08T10:09:04,Mumbai,Maharashtra,India,DEV-9843,199.19.172.67,Cross-border vendor fee
+TXN0077,Kavya Srinivasan,589495655793,ICICI,119,Zeta Automation,411860132678,IndusInd,3424.41,INR,NEFT,Salary,2026-05-14T13:43:46,Mumbai,Maharashtra,India,DEV-8355,69.122.158.240,Payroll processing
+TXN0078,Karan Kapoor,322551853248,Yes Bank,1623,Crestline Supplies,764866345752,ICICI,13308.61,INR,IMPS,Personal,2026-05-13T16:33:26,Pune,Maharashtra,India,DEV-5096,23.246.190.52,Monthly operational payment
+TXN0079,Nitin Bhatia,344428757591,IndusInd,950,Nimbus Exporters,597428952800,SBI,4706.28,INR,NEFT,Personal,2026-05-29T16:09:53,Bengaluru,Karnataka,India,DEV-1436,116.27.202.191,Platform subscription renewal
+TXN0080,Sana Siddiqui,139245691417,HDFC,1748,Zeta Automation,618959874397,Yes Bank,3961.83,INR,RTGS,Business,2026-05-23T18:21:50,Delhi,Delhi,India,DEV-3273,204.240.229.2,Monthly operational payment
+TXN0081,Rahul Verma,560585590540,SBI,1619,Sundaram Logistics,974622637873,Kotak,11470.05,INR,IMPS,Business,2026-05-10T11:19:07,Mumbai,Maharashtra,India,DEV-8489,26.56.255.8,Routine business settlement
+TXN0082,Siddharth Vaidya,830948947428,Kotak,33,Nimbus Exporters,193064274382,Kotak,10038.10,INR,RTGS,Salary,2026-05-20T13:15:36,Mumbai,Maharashtra,India,DEV-6908,27.10.199.240,Platform subscription renewal
+TXN0083,Priya Nair,147817630111,SBI,736,Zeta Automation,698513567016,SBI,50000.00,INR,RTGS,Business,2026-05-08T19:42:40,Delhi,Delhi,India,DEV-3868,209.237.245.93,Round amount pattern
+TXN0084,Vikram Mehta,536005252551,Yes Bank,1650,Nexa Systems,997601447225,Kotak,1654.90,INR,NEFT,Business,2026-05-07T08:20:59,Hyderabad,Telangana,India,DEV-8756,74.18.97.146,Cross-border vendor fee
+TXN0085,Ishita Banerjee,646263220416,IndusInd,924,Oracle Retail India,648433258112,SBI,5282.67,INR,UPI,Personal,2026-05-29T14:47:28,Chennai,Tamil Nadu,India,DEV-9507,78.42.217.40,Platform subscription renewal
+TXN0086,Nisha Reddy,888567255357,IndusInd,193,Urban Malls Ltd,282218781039,Yes Bank,7909.34,INR,RTGS,Business,2026-05-11T18:18:19,Mumbai,Maharashtra,India,DEV-8272,99.228.21.180,Expense reimbursement
+TXN0087,Kavya Srinivasan,134156970372,SBI,1404,Global Health Services,845638847947,IndusInd,13254.34,INR,UPI,Business,2026-05-21T14:23:32,Chennai,Tamil Nadu,India,DEV-8179,18.64.34.120,Monthly operational payment
+TXN0088,Siddharth Vaidya,252788830639,SBI,1420,Crestline Supplies,501705971417,Axis,12878.45,INR,UPI,Vendor Payment,2026-05-15T13:23:28,Hyderabad,Telangana,India,DEV-6150,176.142.127.58,Vendor fulfilment
+TXN0089,Aarav Sharma,641159990224,Axis,1617,Bharat Telecom,234003745604,ICICI,5959.94,INR,UPI,Personal,2026-05-09T19:28:13,Pune,Maharashtra,India,DEV-2213,125.88.227.44,Cross-border vendor fee
+TXN0090,Tara Krishnan,498545891235,Yes Bank,1773,Sigma Labs,346998225159,HDFC,9927.35,INR,RTGS,Personal,2026-05-06T19:45:59,Delhi,Delhi,India,DEV-4292,212.71.121.252,Monthly operational payment
+TXN0091,Aarav Sharma,553229411741,Kotak,164,Crestline Supplies,549980135389,IndusInd,5737.61,INR,NEFT,Business,2026-05-10T14:45:46,Pune,Maharashtra,India,DEV-2208,42.162.37.230,Expense reimbursement
+TXN0092,Yash Khanna,281694831414,SBI,916,Nimbus Exporters,452882961074,Yes Bank,11998.91,INR,NEFT,Vendor Payment,2026-05-17T08:53:07,Mumbai,Maharashtra,India,DEV-4694,98.145.40.128,Monthly operational payment
+TXN0093,Karan Kapoor,186021209147,SBI,1242,Ciscom Retail,948863580109,Kotak,10000.00,INR,UPI,Vendor Payment,2026-05-19T10:10:42,Mumbai,Maharashtra,India,DEV-5336,176.107.213.15,Round amount pattern
+TXN0094,Pooja Singh,856227660834,SBI,1678,Ciscom Retail,272056016376,Axis,12966.80,INR,IMPS,Vendor Payment,2026-05-26T18:25:19,Chennai,Tamil Nadu,India,DEV-7809,133.237.104.174,Expense reimbursement
+TXN0095,Kavya Srinivasan,363363597372,SBI,297,Venkatesh Pharma,235147470601,SBI,5127.59,INR,RTGS,Salary,2026-05-25T13:32:35,Chennai,Tamil Nadu,India,DEV-8366,73.72.49.25,Vendor fulfilment
+TXN0096,Mira Joshi,613311834571,IndusInd,1213,Zeta Automation,646786017864,HDFC,6343.06,INR,NEFT,Personal,2026-05-24T13:12:48,Pune,Maharashtra,India,DEV-2475,110.234.123.110,Monthly operational payment
+TXN0097,Rakesh Gupta,502556581887,HDFC,1129,Crestline Supplies,545662371308,SBI,4660.68,INR,IMPS,Personal,2026-05-01T09:27:08,Bengaluru,Karnataka,India,DEV-1741,112.26.99.185,Cross-border vendor fee
+TXN0098,Meera Pillai,930498955541,HDFC,293,BluePeak Insurance,315367988390,Kotak,7402.34,INR,RTGS,Business,2026-05-04T14:23:50,Hyderabad,Telangana,India,DEV-9341,112.20.23.19,Standard purchase order
+TXN0099,Vikram Mehta,778564527667,IndusInd,701,Sigma Labs,749825263396,SBI,7587.79,INR,NEFT,Vendor Payment,2026-05-30T17:20:10,Hyderabad,Telangana,India,DEV-9311,140.250.153.243,Platform subscription renewal
+TXN0100,Aarav Sharma,622254750088,SBI,1661,Crestline Supplies,961809200976,IndusInd,2548.14,INR,IMPS,Personal,2026-05-29T19:55:44,Chennai,Tamil Nadu,India,DEV-4728,194.26.245.87,Routine business settlement
+TXN0101,Aditya Das,560908799623,IndusInd,1202,Urban Malls Ltd,551621958390,Yes Bank,3017.64,INR,NEFT,Business,2026-05-23T09:12:01,Hyderabad,Telangana,India,DEV-4340,115.241.31.70,Expense reimbursement
+TXN0102,Aditya Das,949011390738,Kotak,672,Indigo Travel Co,894000529738,Yes Bank,50000.00,INR,IMPS,Salary,2026-05-06T15:58:34,Delhi,Delhi,India,DEV-5331,166.247.98.126,Round amount pattern
+TXN0103,Rohit Rao,484312829345,SBI,1473,Ciscom Retail,975891945255,Yes Bank,12780.27,INR,RTGS,Personal,2026-05-07T19:45:31,Mumbai,Maharashtra,India,DEV-5480,83.62.194.202,Standard purchase order
+TXN0104,Ishita Banerjee,398665917986,SBI,935,Venkatesh Pharma,718187630594,Yes Bank,4737.85,INR,UPI,Personal,2026-05-21T12:47:30,Bengaluru,Karnataka,India,DEV-5450,45.55.122.124,Payroll processing
+TXN0105,Priya Nair,275789144602,ICICI,706,Nimbus Exporters,819007192634,Axis,4063.89,INR,UPI,Salary,2026-05-23T15:06:43,Chennai,Tamil Nadu,India,DEV-8822,176.102.147.164,Monthly operational payment
+TXN0106,Mira Joshi,964993505193,IndusInd,388,Oracle Retail India,303991120555,Yes Bank,9223.27,INR,NEFT,Business,2026-05-14T10:59:58,Bengaluru,Karnataka,India,DEV-5742,19.4.152.54,Routine business settlement
+TXN0107,Dev Patel,277513936539,Axis,1772,BluePeak Insurance,605651306822,Yes Bank,7882.60,INR,IMPS,Vendor Payment,2026-05-17T15:17:12,Chennai,Tamil Nadu,India,DEV-5215,193.95.7.172,Vendor fulfilment
+TXN0108,Mira Joshi,624589933523,Yes Bank,1085,Prime Couriers,105360321413,SBI,3358.59,INR,IMPS,Salary,2026-05-11T09:25:42,Mumbai,Maharashtra,India,DEV-7284,70.228.136.168,Vendor fulfilment
+TXN0109,Mira Joshi,652702477657,Yes Bank,157,Prime Couriers,876907191317,IndusInd,100000.00,INR,RTGS,Vendor Payment,2026-05-22T09:29:19,Pune,Maharashtra,India,DEV-6095,186.60.151.188,Round amount pattern
+TXN0110,Kavya Srinivasan,373855101806,ICICI,881,Sparx Interiors,931850734401,Kotak,7081.64,INR,IMPS,Personal,2026-05-23T16:58:30,Mumbai,Maharashtra,India,DEV-2341,144.228.185.39,Payroll processing
+TXN0111,Rakesh Gupta,743029266317,HDFC,366,Astra Foods,200883747961,Kotak,12305.52,INR,NEFT,Vendor Payment,2026-05-11T16:28:07,Pune,Maharashtra,India,DEV-8298,217.28.232.67,Payroll processing
+TXN0112,Aditya Das,339426407161,Axis,1511,Global Health Services,179793239299,HDFC,1910.16,INR,IMPS,Personal,2026-05-01T14:16:52,Pune,Maharashtra,India,DEV-7941,98.32.30.35,Routine business settlement
+TXN0113,Pooja Singh,187512731223,SBI,796,Oracle Retail India,248345165064,Yes Bank,3413.77,INR,NEFT,Salary,2026-05-29T14:28:55,Hyderabad,Telangana,India,DEV-6697,40.91.201.65,Platform subscription renewal
+TXN0114,Ritika Shah,352644409339,IndusInd,1409,Sparx Interiors,603574229747,SBI,10501.01,INR,RTGS,Salary,2026-05-24T16:27:34,Bengaluru,Karnataka,India,DEV-3541,80.96.57.16,Platform subscription renewal
+TXN0115,Tara Krishnan,693711966374,Kotak,1246,Global Health Services,929861852263,IndusInd,8504.00,INR,UPI,Business,2026-05-24T00:25:28,Bengaluru,Karnataka,India,DEV-1924,45.148.119.163,Odd hour activity
+TXN0116,Rakesh Gupta,165606286550,IndusInd,323,Urban Malls Ltd,787946958681,Yes Bank,11266.10,INR,NEFT,Personal,2026-05-22T16:14:26,Chennai,Tamil Nadu,India,DEV-7999,152.253.24.176,Cross-border vendor fee
+TXN0117,Siddharth Vaidya,427385361962,IndusInd,335,Zeta Automation,881072192156,ICICI,5120.43,INR,IMPS,Salary,2026-05-10T14:11:48,Pune,Maharashtra,India,DEV-8586,24.211.213.68,Expense reimbursement
+TXN0118,Arjun Menon,145539203444,SBI,1764,Sparx Interiors,181061582626,ICICI,6922.00,INR,UPI,Salary,2026-05-09T03:43:38,Mumbai,Maharashtra,India,DEV-4555,132.106.170.155,Odd hour activity
+TXN0119,Aarav Sharma,454558480798,ICICI,1454,Indigo Travel Co,412568452094,Axis,2642.99,INR,IMPS,Vendor Payment,2026-05-20T19:13:25,Chennai,Tamil Nadu,India,DEV-8639,146.183.157.133,Payroll processing
+TXN0120,Ishita Banerjee,262097444683,Axis,446,Nimbus Exporters,383537505481,Kotak,9998.00,INR,IMPS,Personal,2026-05-12T13:26:02,Hyderabad,Telangana,India,DEV-7841,85.78.100.168,Structuring with anomalous amount

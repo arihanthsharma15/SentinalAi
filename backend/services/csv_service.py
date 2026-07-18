@@ -88,7 +88,7 @@ class CSVService:
         if "description" not in normalized.columns:
             normalized["description"] = normalized.get(
                 "remarks",
-                "",
+                pd.Series("", index=normalized.index),
             ).fillna("")
 
         if "receiver_account_age_days" not in normalized.columns:
@@ -100,15 +100,17 @@ class CSVService:
         if "linked_invoice_id" not in normalized.columns:
             normalized["linked_invoice_id"] = None
 
-        normalized["sender_account_age_days"] = normalized[
-            "sender_account_age_days"
-        ].fillna(0).astype(int)
-
-        normalized["receiver_account_age_days"] = normalized[
-            "receiver_account_age_days"
-        ].fillna(0).astype(int)
-
-        normalized["amount"] = normalized["amount"].astype(float)
+        try:
+            normalized["sender_account_age_days"] = pd.to_numeric(
+                normalized["sender_account_age_days"], errors="raise"
+            ).fillna(0).astype(int)
+            normalized["receiver_account_age_days"] = pd.to_numeric(
+                normalized["receiver_account_age_days"], errors="raise"
+            ).fillna(0).astype(int)
+            normalized["amount"] = pd.to_numeric(normalized["amount"], errors="raise")
+            pd.to_datetime(normalized["timestamp"], errors="raise")
+        except (TypeError, ValueError) as exc:
+            raise HTTPException(status_code=400, detail=f"Invalid transaction data: {exc}") from exc
         normalized["transaction_type"] = normalized["transaction_type"].astype(str)
         normalized["timestamp"] = normalized["timestamp"].astype(str)
         normalized["description"] = normalized["description"].astype(str)
@@ -130,8 +132,8 @@ class CSVService:
 
             raise HTTPException(
                 status_code=400,
-                detail="Unable to read transactions CSV."
-    
+                detail="Unable to read transactions CSV.",
+            )
 
         df = CSVService.normalize_transactions(df)
 
@@ -164,8 +166,13 @@ class CSVService:
                 "",
             )
 
-        normalized["amount"] = normalized["amount"].astype(float)
-        normalized["invoice_date"] = normalized["invoice_date"].astype(str)
+        try:
+            normalized["amount"] = pd.to_numeric(normalized["amount"], errors="raise")
+            normalized["invoice_date"] = pd.to_datetime(
+                normalized["invoice_date"], errors="raise"
+            ).dt.date.astype(str)
+        except (TypeError, ValueError) as exc:
+            raise HTTPException(status_code=400, detail=f"Invalid invoice data: {exc}") from exc
         normalized["payment_status"] = normalized["payment_status"].astype(str)
         normalized["gst_number"] = normalized["gst_number"].astype(str)
         normalized["vendor_name"] = normalized["vendor_name"].astype(str)
