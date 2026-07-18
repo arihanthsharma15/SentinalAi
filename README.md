@@ -6,7 +6,11 @@ SentinelAI ingests transaction and invoice CSV data, runs it through a set of de
 
 ---
 
-## How It Works
+# Architecture Diagram 
+
+<p align="center">
+  <img src="docs/architecture.png" width="1000">
+</p>
 
 ```
 Transaction CSV ──┐
