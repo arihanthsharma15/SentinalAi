@@ -1,0 +1,16 @@
+SentinelAI Compliance Investigation Report
+Generated: 2026-07-18 12:34:01.159929
+Total Flagged Records : 0
+High Risk : 0
+Medium Risk : 0
+Low Risk : 0
+
+AI Executive Summary:
+Executive Summary:
+- Total flagged records: 0
+- High risk: 0
+- Medium risk: 0
+- Low risk: 0
+Review the detailed findings table below for record-level recommendations.
+
+Detailed Findings:

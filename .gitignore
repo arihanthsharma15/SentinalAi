@@ -1,0 +1,9 @@
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc

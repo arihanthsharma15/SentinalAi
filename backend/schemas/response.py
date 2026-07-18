@@ -1,6 +1,6 @@
 from typing import List
+from pydantic import BaseModel, Field
 
-from pydantic import BaseModel
 
 
 class GemmaAnalysis(BaseModel):
@@ -14,10 +14,11 @@ class FlaggedRecord(BaseModel):
     id: str
     type: str
 
+
     sender: str
     receiver: str
 
-    amount: str
+    amount: float
 
     rules_triggered: List[str]
 
@@ -25,4 +26,4 @@ class FlaggedRecord(BaseModel):
 
 
 class FlaggedRecordsResponse(BaseModel):
-    records: List[FlaggedRecord]
+    records: List[FlaggedRecord] = Field(default_factory=list)
